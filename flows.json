@@ -1,0 +1,248 @@
+[
+    {
+        "id": "58065119ea84cc81",
+        "type": "tab",
+        "label": "Flow 3",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "e1febc020a44cc5b",
+        "type": "inject",
+        "z": "58065119ea84cc81",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "de prueba",
+        "payloadType": "str",
+        "x": 100,
+        "y": 80,
+        "wires": [
+            [
+                "41faf4c67d90814b"
+            ]
+        ]
+    },
+    {
+        "id": "a824e079be1421bb",
+        "type": "inject",
+        "z": "58065119ea84cc81",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "0",
+        "payloadType": "num",
+        "x": 90,
+        "y": 160,
+        "wires": [
+            [
+                "fda3f9d57061f60c",
+                "5d1bb1800c9de0a9"
+            ]
+        ]
+    },
+    {
+        "id": "b7187108c02334d3",
+        "type": "inject",
+        "z": "58065119ea84cc81",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "5",
+        "payloadType": "num",
+        "x": 90,
+        "y": 220,
+        "wires": [
+            [
+                "fda3f9d57061f60c",
+                "5d1bb1800c9de0a9"
+            ]
+        ]
+    },
+    {
+        "id": "2b17822a331fa084",
+        "type": "inject",
+        "z": "58065119ea84cc81",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "10",
+        "payloadType": "num",
+        "x": 90,
+        "y": 280,
+        "wires": [
+            [
+                "fda3f9d57061f60c",
+                "5d1bb1800c9de0a9"
+            ]
+        ]
+    },
+    {
+        "id": "41faf4c67d90814b",
+        "type": "ui_text",
+        "z": "58065119ea84cc81",
+        "group": "feaa72873942b36a",
+        "order": 0,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "Texto",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "className": "",
+        "x": 390,
+        "y": 80,
+        "wires": []
+    },
+    {
+        "id": "fda3f9d57061f60c",
+        "type": "ui_gauge",
+        "z": "58065119ea84cc81",
+        "name": "",
+        "group": "b173611f151f8ccc",
+        "order": 0,
+        "width": 0,
+        "height": 0,
+        "gtype": "gage",
+        "title": "gauge",
+        "label": "units",
+        "format": "{{value}}",
+        "min": 0,
+        "max": 10,
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "",
+        "seg2": "",
+        "className": "",
+        "x": 390,
+        "y": 180,
+        "wires": []
+    },
+    {
+        "id": "5d1bb1800c9de0a9",
+        "type": "ui_chart",
+        "z": "58065119ea84cc81",
+        "name": "",
+        "group": "b173611f151f8ccc",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "label": "chart",
+        "chartType": "line",
+        "legend": "false",
+        "xformat": "HH:mm:ss",
+        "interpolate": "linear",
+        "nodata": "",
+        "dot": false,
+        "ymin": "",
+        "ymax": "",
+        "removeOlder": 1,
+        "removeOlderPoints": "",
+        "removeOlderUnit": "3600",
+        "cutout": 0,
+        "useOneColor": false,
+        "useUTC": false,
+        "colors": [
+            "#1f77b4",
+            "#aec7e8",
+            "#ff7f0e",
+            "#2ca02c",
+            "#98df8a",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "outputs": 1,
+        "useDifferentColor": false,
+        "className": "",
+        "x": 390,
+        "y": 280,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "feaa72873942b36a",
+        "type": "ui_group",
+        "name": "Texto",
+        "tab": "9b59b2c8e242dd18",
+        "order": 1,
+        "disp": true,
+        "width": "6",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "b173611f151f8ccc",
+        "type": "ui_group",
+        "name": "Graficos",
+        "tab": "9b59b2c8e242dd18",
+        "order": 2,
+        "disp": true,
+        "width": "6",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "9b59b2c8e242dd18",
+        "type": "ui_tab",
+        "name": "Flow3",
+        "icon": "dashboard",
+        "order": 2,
+        "disabled": false,
+        "hidden": false
+    }
+]
